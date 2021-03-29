@@ -1,51 +1,53 @@
-const initialState = {
-    photos: []
-};
+// DEPRECATED
 
-const GET_PHOTOS = "GET_PHOTOS";
+// const initialState = {
+//     photos: []
+// };
 
-export function loadData(requestBody) {
-    return {
-        type: 'api/loadData',
-        payload: {
-            requestBody
-        }
-    }
-}
+// const GET_PHOTOS = "GET_PHOTOS";
 
-export function loadingData() {
-    return {
-        type: 'api/loadingData'
-    }
-}
+// export function loadData(requestBody) {
+//     return {
+//         type: 'api/loadData',
+//         payload: {
+//             requestBody
+//         }
+//     }
+// }
 
-export function loadedData(response) {
-    return {
-        type: 'api/loadedData',
-        payload: {
-            response
-        }
-    }
-}
+// export function loadingData() {
+//     return {
+//         type: 'api/loadingData'
+//     }
+// }
 
-export function loadDataFailed(error) {
-    return {
-        type: 'api/loadDataFailed',
-        payload: {
-            error
-        }
-    }
-}
+// export function loadedData(response) {
+//     return {
+//         type: 'api/loadedData',
+//         payload: {
+//             response
+//         }
+//     }
+// }
 
-export default function reducer(state = initialState, action){
-    switch(action.type){
-        case GET_PHOTOS + "_PENDING":
-            return state
-        case GET_PHOTOS + "_FULFILLED":
-            return {...state, photos: action.payload}
-        case GET_PHOTOS + "_REJECTED":
-            return initialState
-        default:
-            return state
-    }
-}
+// export function loadDataFailed(error) {
+//     return {
+//         type: 'api/loadDataFailed',
+//         payload: {
+//             error
+//         }
+//     }
+// }
+
+// export default function reducer(state = initialState, action){
+//     switch(action.type){
+//         case GET_PHOTOS + "_PENDING":
+//             return state
+//         case GET_PHOTOS + "_FULFILLED":
+//             return {...state, photos: action.payload}
+//         case GET_PHOTOS + "_REJECTED":
+//             return initialState
+//         default:
+//             return state
+//     }
+// }
