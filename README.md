@@ -1,4 +1,9 @@
-# Getting Started with Create React App
+# Pexels Photo Grab Application
+
+This is a simple Single Page Application designed to make a get request to a public API and display the information in a toggle-able grid view or list view. Each photo is a link to the Pexels-hosted photograph and each photographer's name is a link to their Pexels profile.
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
