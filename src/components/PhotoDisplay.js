@@ -40,6 +40,11 @@ function PhotoDisplay() {
     const [toggle, setToggle] = useState(true)
     
     useEffect(() => {
+
+        /* 
+            This fetchPhotos should be taken care of by your epic. 
+            See ~/src/containers/Pexels/epics @getPhotosEpic
+        */
         const fetchPhotos = async () => {
             try {
                 let res = await axios.get('https://api.pexels.com/v1/curated', {
@@ -52,22 +57,12 @@ function PhotoDisplay() {
                 console.log('err in fetchPhotos func', err)
             }
         }
+
+        /* 
+            This is now what you need to "dispatch" for the epic to listen to it.
+            See ~/src/containers/Pexels/actions @getPhotos
+        */
         fetchPhotos();
-        // const observable$ = Observable.create((observer) => {
-        //     axios.get('https://api.pexels.com/v1/curated', {
-        //         header: {
-        //             'Authorization': `${process.env.REACT_APP_API_KEY}`
-        //         }
-        //     }.then(res => {
-        //         setPics(res.data.photos)
-        //         observer.next(res.data.photos)
-        //         observer.complete();
-        //     })
-        //     .catch(err => {
-        //         observer.error(err);
-        //     }))
-        // });
-        // observable$();
     }, [])
 
     const toggleSwitch = () => {

@@ -1,3 +1,26 @@
+# Pexels Notes
+
+Application structure is by no means a one-size fits all, but it can for sure help you to understand how single pieces fit together and what their singular purpose is.
+
+## Components vs Containers
+
+This is how it was taught to me: "Containers fetch the data and components display the data."
+
+## Redux, Actions, Reducers, and Epics
+
+The typical cycle a redux store is this:
+
+```text
+// For application updates
+dispatch(action) -> reducer
+
+or
+
+// For fetching data
+dispatch(action) -> epic -> AxiosResponse -> dispatch(action) -> reducer
+```
+
+
 # Pexels Photo Grab Application
 
 This is a simple Single Page Application designed to make a get request to a public API and display the information in a toggle-able grid view or list view. Each photo is a link to the Pexels-hosted photograph and each photographer's name is a link to their Pexels profile.

@@ -1,5 +1,5 @@
 import './App.css';
-import PhotoDisplay from './components/PhotoDisplay';
+import PhotoDisplay from './components/PhotoDisplayNew';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
